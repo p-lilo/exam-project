@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختيار المستخدم</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: ltr;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 100px;
+    }
+    .option {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .option:hover {
+      transform: scale(1.6);
+    }
+    .option img {
+      width: 150px;
+      height: 150px;
+    }
+    .option button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .option button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>what is your role?</h1>
+  <div class="container">
+    <div class="option" id="teacheroption">
+      <img src="teacher.png" alt="Teacher">
+      <br>
+      <button id="teacher-btn">teacher</button>
+    </div>
+    <div class="option" id="studentoption">
+      <img src="student.png" alt="Student">
+      <br>
+      <button id="student-btn">student</button>
+    </div>
+  </div>
+  <div class="message" id="selection-message"></div>
+
+  <script>
+    $(document).ready(function(){
+      $('#teacher-btn').click(function(){
+        $('#selection-message').text('"you select" your are ateacher.').css('color', 'green');
+        
+        setTimeout(function(){
+          window.location.href = 'teacher.html'; 
+        }, 2000);
+      });
+
+      $('#student-btn').click(function(){
+        $('#selection-message').text('"you select" your are student.').css('color', 'blue');
+      
+        setTimeout(function(){
+          window.location.href = 'student.html'; 
+      });
+    });
+    })
+  </script>
+
+</body>
+</html>

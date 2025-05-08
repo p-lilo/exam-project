@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>exam application</title>
+  <link rel="stylesheet" href="exam.css" />
+  <script type="module" src="new eam.js" ></script>
+</head>
+<body>
+  <div id="app-container">
+    <h1>  create exam
+      
+    </h1>
+    <div>
+      <label for="examName">examName</label>
+      <input type="text" id="examName" placeholder="write exam" />
+    </div>
+    <div>
+      <label for="question"></label>
+      <input type="text" id="question" placeholder="add question" />
+    </div>
+    <div>
+      <label for="choice0"></label>choose 1</label>
+      <input type="text" id="choice0" />
+    </div>
+    <div>
+      <label for="choice1">choose2</label>
+      <input type="text" id="choice1" />
+    </div>
+    <div>
+      <label for="choice2">choose3</label>
+      <input type="text" id="choice2" />
+    </div>
+    <div>
+      <label for="choice3">choose4</label>
+      <input type="text" id="choice3" />
+    </div>
+    <div>
+      <label for="correctIndex"> correct answer</label>
+      <input type="number" id="correctIndex" min="1" max="4" />
+    </div>
+    <button id="addQuestion">إadd question</button>
+    <button id="finishExam">finish exam</button>
+    <div id="questionList"></div>
+  </div>
+</body>
+</html>
+
