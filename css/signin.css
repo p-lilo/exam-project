@@ -30,6 +30,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
+    box-shadow: 0 0 15 rgba(rgb(220, 215, 215), rgb(198, 207, 198), rgb(174, 174, 182), alpha);
   }
   button {
     background-color: #a58b74;
@@ -43,7 +44,7 @@ body {
     margin-top: 15px;
   }
   button:hover {
-    background-color: #8e715e;
+    background-color: #502407;
   }
   .switch {
     margin-top: 15px;

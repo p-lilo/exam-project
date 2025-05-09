@@ -4,46 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>exam application</title>
-  <link rel="stylesheet" href="exam.css" />
-  <script type="module" src="new eam.js" ></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/exam.css" />
 </head>
 <body>
-  <div id="app-container">
-    <h1>  create exam
-      
-    </h1>
+  <div id="app-container" class="container mt-4">
+    <h1>create  exam</h1>
+    
     <div>
-      <label for="examName">examName</label>
-      <input type="text" id="examName" placeholder="write exam" />
+      <label for="examName">Title of the exam</label>
+      <input type="text" id="examName" class="form-control" />
     </div>
+
+    <div class="mt-2">
+      <label for="duration">the duration of the exam(hr:min)</label>
+      <input type="text" id="duration" placeholder="hours:minutescd" class="form-control" />
+    </div>
+    
+    <div class="mt-2">
+      <input type="checkbox" id="available" />
+      <label for="available">available</label>
+    </div>
+    
+    <hr>
+    
     <div>
-      <label for="question"></label>
-      <input type="text" id="question" placeholder="add question" />
+      <label>السؤال</label>
+      <input type="text" id="question" class="form-control" placeholder="أدخل السؤال" />
     </div>
-    <div>
-      <label for="choice0"></label>choose 1</label>
-      <input type="text" id="choice0" />
+    
+    <div class="row mt-2">
+      <div class="col">
+        <label>choose 1</label>
+        <input type="text" id="choice1" class="form-control" />
+      </div>
+      <div class="col">
+        <label>choose 2</label>
+        <input type="text" id="choice2" class="form-control" />
+      </div>
     </div>
-    <div>
-      <label for="choice1">choose2</label>
-      <input type="text" id="choice1" />
+    <div class="row mt-2">
+      <div class="col">
+        <label>choose 3</label>
+        <input type="text" id="choice3" class="form-control" />
+      </div>
+      <div class="col">
+        <label>choose 4</label>
+        <input type="text" id="choice4" class="form-control" />
+      </div>
     </div>
-    <div>
-      <label for="choice2">choose3</label>
-      <input type="text" id="choice2" />
+    
+    <div class="mt-2">
+      <label>رقم الإجابة الصحيحة (1-4)</label>
+      <input type="number" id="correctIndex" min="1" max="4" class="form-control"/>
     </div>
-    <div>
-      <label for="choice3">choose4</label>
-      <input type="text" id="choice3" />
-    </div>
-    <div>
-      <label for="correctIndex"> correct answer</label>
-      <input type="number" id="correctIndex" min="1" max="4" />
-    </div>
-    <button id="addQuestion">إadd question</button>
-    <button id="finishExam">finish exam</button>
-    <div id="questionList"></div>
+    
+    <button id="addQuestion" class="btn btn-primary mt-3">Add question</button>
+    <button id="finishExam" class="btn btn-success mt-2">finish Exam</button>
+
+    <div id="questionList" class="mt-4"></div>
   </div>
+  <script type="module" src="js/newExam.js"></script>
 </body>
 </html>
+
 

@@ -1,0 +1,129 @@
+/* إعدادات الأساسيات */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  padding: 20px;
+  direction: ltr;
+}
+
+/* تنسيق حاوية التطبيق */
+#app-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #1c87c9;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* تنسيق الحقول والنماذج */
+.form-label {
+  font-weight: bold;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: #1c87c9;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  background-color:#6b4c3b ;
+  color: #fff;
+}
+
+/* تنسيق الزر إضافة سؤال */
+#addQuestion {
+  background-color: #6b4c3b;
+  color: #fff;
+  border: none;
+}
+
+#addQuestion:hover {
+  background-color:#6b4c3b;
+}
+
+/* تنسيق الزر إنهاء الامتحان */
+#finishExam {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+}
+
+#finishExam:hover {
+  background-color: #0056b3;
+}
+
+/* تنسيق قائمة الأسئلة */
+#questionList {
+  margin-top: 20px;
+}
+
+.question-item {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.question-item li {
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
+.question-item li::before {
+  content: "•";
+  color: #1c87c9;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="number"], input[type="text"], input[type="time"] {
+  margin-top: 10px;
+}
