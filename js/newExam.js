@@ -73,7 +73,7 @@ document.getElementById('finishExam').addEventListener('click', async () => {
       name: examName,
       duration: duration,
       createdAt: serverTimestamp(),
-      createdBy: auth.currentUser.uid,
+      createdBy: auth.currentUser?.uid ?? "anonymous",
       isAvailable
     });
 
@@ -90,8 +90,9 @@ document.getElementById('finishExam').addEventListener('click', async () => {
 
       await updateDoc(questionRef, { id: questionRef.id });
     }
+    alert("the exam has sent sucussfully");
 
-    alert("Exam saved successfully.");
+    // تفريغ الحقول
     document.getElementById('examName').value = '';
     document.getElementById('duration').value = '';
     document.getElementById('available').checked = false;
@@ -102,3 +103,10 @@ document.getElementById('finishExam').addEventListener('click', async () => {
     alert("An error occurred while saving the exam.");
   }
 });
+
+
+
+
+
+
+
