@@ -22,8 +22,13 @@ display: block;
 padding: 15px 20px;
 }
 .sidebar a:hover {
-background-color: white;
-color: black;
+  background-color:rgb(218, 172, 143) ;
+  color: black;
+}
+.sidebar a.active {
+  background-color: rgb(218, 172, 143);
+  color: black;
+  border-radius: 5px;
 }
 .sidebar.active {
 left: 0;
@@ -47,8 +52,12 @@ width: 50px;
 border-radius: 50%;
 object-fit: cover;
 }
-.sidebar a.active-link {
-    background-color: #f8f9fa;
-    font-weight: bold;
-    color: #000;
-  }
+.result-card {
+  transition: all 0.3s ease-in-out;
+}
+.result-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.toggle-btn {
+  width: fit-content;
+}

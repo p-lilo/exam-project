@@ -1,4 +1,4 @@
-// استيراد الدالة signInWithEmailAndPassword من Firebase
+
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 import { auth, db } from "./config.js";
@@ -14,7 +14,7 @@ export const login = async (event) => {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const uid = userCredential.user.uid;
 
-    // استرجاع بيانات المستخدم من Firestore
+    // get user data
     const userDoc = await getDoc(doc(db, "users", uid));
     if (userDoc.exists()) {
       const username = userDoc.data().username;

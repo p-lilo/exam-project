@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,24 +12,22 @@
 <body>
   <div class="container">
     <h2><i class="bi bi-book-half"></i> Online Exams</h2>
-    <h4>تسجيل الدخول</h4>
+    <h4>Login</h4>
 
     <form id="login-form">
-      <input id="email" type="email" placeholder="البريد الإلكتروني" required>
-      <input id="password" type="password" placeholder="كلمة المرور" required>
-      <button type="submit">دخول</button>
+      <input id="email" type="email" placeholder="Email Address" required>
+      <input id="password" type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
     </form>
 
     <div class="switch">
-      لا امتلك حساب؟ <a href="signup.html">سجل من هنا</a>
+      Don't have an account? <a href="signup.html">Sign up here</a>
     </div>
   </div>
   
- 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module">
     import { login } from './js/auth.js';
-  
     document.getElementById("login-form").addEventListener("submit", login);
   </script>
 </body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/exam.css" />
+</head>
+<body>
+  <nav class="navbar px-3 py-2 shadow-sm d-flex justify-content-between align-items-center">
+    <a href="Sdashboard.html"><i class="bi bi-arrow-left-circle fs-4"></i></a>
+    <h2 id="examName" class="m-0 fs-5">Architecture Exam</h2>
+    <div id="clock" class="fs-6 fw-bold"></div>
+  </nav>
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-md-3 col-12 order-2 order-md-1 mb-3">
+        <button id="goToSavedBtn" class="btn btn-warning mb-3">Saved Questions</button>
+        <ul class="list-group text-center text-md-start" id="sideList">
+        </ul>
+      </div>
+
+      <div class="col-md-9 col-12 order-1 order-md-2" id="mainContentexam">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/Sexam.js"></script>
+</body>
+</html>

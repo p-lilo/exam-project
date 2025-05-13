@@ -1,0 +1,131 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfbf9;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6b4c3b; 
+    color: #fff;
+}
+
+#clock, #examName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e2d4c2; /* لون افتح عند الهوفر */
+}
+
+.sidelist {
+    background-color: #F5EFE6; /* خلفية هادية */
+    min-height: 100vh;
+    padding: 20px;
+    border-left: 3px solid #6b4c3b;
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.sidelist-title {
+    color: #6b4c3b;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.list-group-item {
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    background-color: #E5D5C1;
+    color: #4A3F35;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #d3bfa9;
+    transform: scale(1.05);
+}
+
+#mainContentexam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #fdfbf9;
+    padding: 30px 15px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.question-card {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #FFF7F0;
+    border: 1px solid #6b4c3b;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(161, 134, 111, 0.2);
+    padding: 20px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.question-card .card-title {
+    color: #6b4c3b;
+    font-weight: bold;
+}
+
+.form-check-label {
+    font-size: 16px;
+    color: #4A3F35;
+}
+
+.next-btn {
+    background-color: #6b4c3b;
+    border: none;
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.next-btn:hover {
+    background-color: #8c6d55;
+    transform: scale(1.1);
+}
+
+/* Animation for sidebar and main content */
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Timer */
+#clock {
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #8c6d55;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
